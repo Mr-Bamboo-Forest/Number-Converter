@@ -1,4 +1,3 @@
-//Square Number Calculate
 function temperaturecalc(){
     var actualtemperature = document.getElementById("temperatesolve").value;
     var select = document.querySelector('#units');
@@ -32,6 +31,42 @@ function temperaturecalc(){
             document.getElementById("temperatureanswer").innerText = kelvintemperature + " in fahrenheit is " + actualtemperaturefahrenheit2;
             document.getElementById("temperatureanswer2").innerText = kelvintemperature + " in celcius is " + actualtemperaturecelcius2; 
         }
+    }
+};
+//https://coolconversion.com/math/binary-octal-hexa-decimal/_binary__10101_to_hexadecimal_
+function typecalc(){
+    var actualtype = document.getElementById("typesolve").value;
+    var select2 = document.querySelector('#types');
+    var selectedvalue2 = select2.value;
+    if (actualtype == ""){
+        document.getElementById("typeanswer").innerText = "Please type number system amount";
+        document.getElementById("typeanswer2").innerText = "";
+    }
+    else {
+        if (selectedvalue2 == " "){
+            document.getElementById("typeanswer").innerText = "Please select suitable type of number system from the dropdown (Binary, Octal or Hexadecimal)";
+        }
+        else if (selectedvalue2 == "binary"){
+            var binary = actualtype; 
+            var binary2octal = parseInt(binary, 2).toString(8)
+            var binary2hexadecimal = parseInt(binary, 2).toString(16)
+            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + binary2octal;
+            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + binary2hexadecimal;
+        }
+        /*else if (selectedvalue2 == "celcius"){
+            var celciustemperature = actualtemperature; 
+            var actualtemperaturefahrenheit = celciustemperature * 9/5 + 32;
+            var actualtemperaturekelvin2 = celciustemperature + 273.15; 
+            document.getElementById("temperatureanswer").innerText = celciustemperature + " in fahrenheit is " + actualtemperaturefahrenheit;
+            document.getElementById("temperatureanswer2").innerText = celciustemperature + " in Kelvin is " + actualtemperaturekelvin2;
+        }    
+        else if (selectedvalue2 == "kelvin"){
+            var kelvintemperature = actualtemperature; 
+            var actualtemperaturefahrenheit2 = (kelvintemperature - 273.15) * 9/5 + 32;
+            var actualtemperaturecelcius2 = kelvintemperature -273.15;
+            document.getElementById("temperatureanswer").innerText = kelvintemperature + " in fahrenheit is " + actualtemperaturefahrenheit2;
+            document.getElementById("temperatureanswer2").innerText = kelvintemperature + " in celcius is " + actualtemperaturecelcius2; 
+        }*/
     }
 };
 function comma(x) {
