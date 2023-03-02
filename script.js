@@ -50,16 +50,22 @@ function typecalc(){
             var binary = actualtype; 
             var binary2octal = parseInt(binary, 2).toString(8)
             var binary2hexadecimal = parseInt(binary, 2).toString(16)
+            var binary2decimal = parseInt(binary, 2).toString(10)
             document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + binary2octal;
             document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + binary2hexadecimal;
+            document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + binary;
+            document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + binary2decimal;
         }
-        /*else if (selectedvalue2 == "celcius"){
-            var celciustemperature = actualtemperature; 
-            var actualtemperaturefahrenheit = celciustemperature * 9/5 + 32;
-            var actualtemperaturekelvin2 = celciustemperature + 273.15; 
-            document.getElementById("temperatureanswer").innerText = celciustemperature + " in fahrenheit is " + actualtemperaturefahrenheit;
-            document.getElementById("temperatureanswer2").innerText = celciustemperature + " in Kelvin is " + actualtemperaturekelvin2;
-        }    
+        else if (selectedvalue2 == "decimal"){
+            var decimal = actualtype; 
+            var decimal2octal = parseInt(decimal, 10).toString(8)
+            var decimal2hexadecimal = parseInt(decimal, 10).toString(16)
+            var decimal2binary = parseInt(decimal, 10).toString(2)
+            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + decimal2octal;
+            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + decimal2hexadecimal;
+            document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + decimal2binary;
+            document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + decimal;
+        }    /*
         else if (selectedvalue2 == "kelvin"){
             var kelvintemperature = actualtemperature; 
             var actualtemperaturefahrenheit2 = (kelvintemperature - 273.15) * 9/5 + 32;
