@@ -65,14 +65,27 @@ function typecalc(){
             document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + decimal2hexadecimal;
             document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + decimal2binary;
             document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + decimal;
-        }    /*
-        else if (selectedvalue2 == "kelvin"){
-            var kelvintemperature = actualtemperature; 
-            var actualtemperaturefahrenheit2 = (kelvintemperature - 273.15) * 9/5 + 32;
-            var actualtemperaturecelcius2 = kelvintemperature -273.15;
-            document.getElementById("temperatureanswer").innerText = kelvintemperature + " in fahrenheit is " + actualtemperaturefahrenheit2;
-            document.getElementById("temperatureanswer2").innerText = kelvintemperature + " in celcius is " + actualtemperaturecelcius2; 
-        }*/
+        }  
+        else if (selectedvalue2 == "octal"){
+            var octal = actualtype; 
+            var octal2decimal = parseInt(octal, 8).toString(10)
+            var octal2hexadecimal = parseInt(octal, 8).toString(16)
+            var octal2binary = parseInt(octal, 8).toString(2)
+            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + octal;
+            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + octal2hexadecimal;
+            document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + octal2binary;
+            document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + octal2decimal;
+        }
+        else if (selectedvalue2 == "hexadecimal"){
+            var hexadecimal = actualtype; 
+            var hexadecimal2decimal = parseInt(hexadecimal, 16).toString(10)
+            var hexadecimal2octal = parseInt(hexadecimal, 16).toString(8)
+            var hexadecimal2binary = parseInt(hexadecimal, 16).toString(2)
+            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + hexadecimal;
+            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + hexadecimal2octal;
+            document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + hexadecimal2binary;
+            document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + hexadecimal2decimal;
+        }
     }
 };
 function comma(x) {
