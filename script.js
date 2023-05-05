@@ -8,7 +8,7 @@ function temperaturecalc(){
     }
     else {
         if (selectedvalule == " "){
-            document.getElementById("temperatureanswer").innerText = "Please select suitable type of temperature from the dropdown (Kelvin, Celcius or Fahrenheit)";
+            document.getElementById("temperatureanswer").innerText = "Please select suitable type of temperature from the dropdown (Celcius, Kelvin or Fahrenheit)";
         }
         else if (selectedvalule == "fahrenheit"){
             var fahrenheittemperature = actualtemperature;
