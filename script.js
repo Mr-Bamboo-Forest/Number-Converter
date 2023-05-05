@@ -14,15 +14,17 @@ function temperaturecalc(){
             var fahrenheittemperature = actualtemperature;
             var actualtemperaturecelcius = (fahrenheittemperature - 32) * 5/9; 
             var actualtemperaturekelvin = (fahrenheittemperature - 32) * 5/9 + 273.15;
-            document.getElementById("temperatureanswer").innerText = fahrenheittemperature + " in celcius is " + actualtemperaturecelcius;
-            document.getElementById("temperatureanswer2").innerText = fahrenheittemperature + " in kelvin is " + actualtemperaturekelvin;
+            document.getElementById("temperatureanswer").innerText = fahrenheittemperature + " in Celcius is " + actualtemperaturecelcius;
+            document.getElementById("temperatureanswer2").innerText = fahrenheittemperature + " in Kelvin is " + actualtemperaturekelvin;
+            document.getElementById("temperatureanswer3").innerText = fahrenheittemperature + " in Fahrenheit is " + actualtemperature;
         }
         else if (selectedvalule == "celcius"){
             var celciustemperature = actualtemperature; 
             var actualtemperaturefahrenheit = celciustemperature * 9/5 + 32;
             var actualtemperaturekelvin2 = celciustemperature + 273.15; 
-            document.getElementById("temperatureanswer").innerText = celciustemperature + " in fahrenheit is " + actualtemperaturefahrenheit;
+            document.getElementById("temperatureanswer3").innerText = celciustemperature + " in Fahrenheit is " + actualtemperaturefahrenheit;
             document.getElementById("temperatureanswer2").innerText = celciustemperature + " in Kelvin is " + actualtemperaturekelvin2;
+            document.getElementById("temperatureanswer").innerText = celciustemperature + " in Celcius is " + actualtemperature;
         }    
         else if (selectedvalule == "kelvin"){
             var kelvintemperature = actualtemperature; 
