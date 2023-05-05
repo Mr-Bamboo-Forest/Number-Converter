@@ -19,3 +19,6 @@ Done and planned to be done
   - [x] Binary 
   - [ ] Base 24
   - [ ] Base 32
+- [x] Words/Number
+  - [x] Numbers to Words
+  - [ ] Words to Numbers
