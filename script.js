@@ -30,8 +30,9 @@ function temperaturecalc(){
             var kelvintemperature = actualtemperature; 
             var actualtemperaturefahrenheit2 = (kelvintemperature - 273.15) * 9/5 + 32;
             var actualtemperaturecelcius2 = kelvintemperature -273.15;
-            document.getElementById("temperatureanswer").innerText = kelvintemperature + " in fahrenheit is " + actualtemperaturefahrenheit2;
-            document.getElementById("temperatureanswer2").innerText = kelvintemperature + " in celcius is " + actualtemperaturecelcius2; 
+            document.getElementById("temperatureanswer3").innerText = kelvintemperature + " in Fahrenheit is " + actualtemperaturefahrenheit2;
+            document.getElementById("temperatureanswer").innerText = kelvintemperature + " in Celcius is " + actualtemperaturecelcius2; 
+            document.getElementById("temperatureanswer2").innerText = kelvintemperature + " in Kelvin is " + actualtemperature;
         }
     }
 };
