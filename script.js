@@ -5,7 +5,7 @@ function temperaturecalc(){
     if (actualtemperature == ""){
         document.getElementById("temperatureanswer").innerText = "Please enter temperature";
         document.getElementById("temperatureanswer2").innerText = "";
-    }
+    } 
     else {
         if (selectedvalule == " "){
             document.getElementById("temperatureanswer").innerText = "Please select suitable type of temperature from the dropdown (Celcius, Kelvin or Fahrenheit)";
