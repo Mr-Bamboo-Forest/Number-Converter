@@ -165,6 +165,61 @@ function numbercalc(){
       var lol = document.getElementById("number").value;
       document.getElementById("wordanswer").innerText = convertNumberToWords(lol);
 };
+/*
+function sizecalc(){
+    var input = document.getElementById("sizasolve").value;
+    var valueinput = document.querySelector('#types');
+    var valueinput2 = valueinput.value;
+    if (input == ""){
+        document.getElementById("typeanswer").innerText = "Please type number system amount";
+        document.getElementById("typeanswer2").innerText = "";
+    }
+    else {
+        if (selectedvalue2 == " "){
+            document.getElementById("typeanswer").innerText = "Please select suitable type of number system from the dropdown (Binary, Octal or Hexadecimal)";
+        }
+        else if (selectedvalue2 == "binary"){
+            var binary = actualtype; 
+            var binary2octal = parseInt(binary, 2).toString(8)
+            var binary2hexadecimal = parseInt(binary, 2).toString(16)
+            var binary2decimal = parseInt(binary, 2).toString(10)
+            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + binary2octal;
+            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + binary2hexadecimal;
+            document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + binary;
+            document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + binary2decimal;
+        }
+        else if (selectedvalue2 == "decimal"){
+            var decimal = actualtype; 
+            var decimal2octal = parseInt(decimal, 10).toString(8)
+            var decimal2hexadecimal = parseInt(decimal, 10).toString(16)
+            var decimal2binary = parseInt(decimal, 10).toString(2)
+            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + decimal2octal;
+            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + decimal2hexadecimal;
+            document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + decimal2binary;
+            document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + decimal;
+        }  
+        else if (selectedvalue2 == "octal"){
+            var octal = actualtype; 
+            var octal2decimal = parseInt(octal, 8).toString(10)
+            var octal2hexadecimal = parseInt(octal, 8).toString(16)
+            var octal2binary = parseInt(octal, 8).toString(2)
+            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + octal;
+            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + octal2hexadecimal;
+            document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + octal2binary;
+            document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + octal2decimal;
+        }
+        else if (selectedvalue2 == "hexadecimal"){
+            var hexadecimal = actualtype; 
+            var hexadecimal2decimal = parseInt(hexadecimal, 16).toString(10)
+            var hexadecimal2octal = parseInt(hexadecimal, 16).toString(8)
+            var hexadecimal2binary = parseInt(hexadecimal, 16).toString(2)
+            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + hexadecimal;
+            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + hexadecimal2octal;
+            document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + hexadecimal2binary;
+            document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + hexadecimal2decimal;
+        }
+    }
+};*/
 function comma(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
