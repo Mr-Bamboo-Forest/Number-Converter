@@ -21,7 +21,7 @@ Done and planned to be done
   - [ ] Base 32
 - [x] Words/Number
   - [x] Numbers to Words
-  - [ ] Words to Numbers
+  - [x] ~~Words to Numbers~~ removed
 - [ ] Units of length
   - [ ] Cm
   - [ ] Metres
