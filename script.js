@@ -54,7 +54,7 @@ function typecalc(){
             var binary2octal = parseInt(binary, 2).toString(8)
             var binary2hexadecimal = parseInt(binary, 2).toString(16)
             var binary2decimal = parseInt(binary, 2).toString(10)
-            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + binary2octal;
+            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + binary2octal; 
             document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + binary2hexadecimal;
             document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + binary;
             document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + binary2decimal;
