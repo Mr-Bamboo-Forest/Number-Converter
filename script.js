@@ -84,8 +84,8 @@ function typecalc(){
             var hexadecimal2decimal = parseInt(hexadecimal, 16).toString(10)
             var hexadecimal2octal = parseInt(hexadecimal, 16).toString(8)
             var hexadecimal2binary = parseInt(hexadecimal, 16).toString(2)
-            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + hexadecimal;
-            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + hexadecimal2octal;
+            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + hexadecimal2octal;
+            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + hexadecimal;
             document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + hexadecimal2binary;
             document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + hexadecimal2decimal;
         }
@@ -165,61 +165,65 @@ function numbercalc(){
       var lol = document.getElementById("number").value;
       document.getElementById("wordanswer").innerText = convertNumberToWords(lol);
 };
-/*
 function sizecalc(){
-    var input = document.getElementById("sizasolve").value;
-    var valueinput = document.querySelector('#types');
-    var valueinput2 = valueinput.value;
-    if (input == ""){
-        document.getElementById("typeanswer").innerText = "Please type number system amount";
-        document.getElementById("typeanswer2").innerText = "";
+    var size2solve = document.getElementById("sizesolve").value;
+    var selectedsizevaluee = document.querySelector('#sizes');
+    var selectedsizevalue = selectedsizevaluee.value;
+    if (size2solve == ""){
+        document.getElementById("sizeanswer").innerText = "Please type the size that you want to convert";
+        document.getElementById("sizeanswer2").innerText = "";
+        document.getElementById("sizeanswer3").innerText = "";
+        document.getElementById("sizeanswer4").innerText = "";
     }
-    else {
-        if (selectedvalue2 == " "){
-            document.getElementById("typeanswer").innerText = "Please select suitable type of number system from the dropdown (Binary, Octal or Hexadecimal)";
+    else{
+        if (selectedsizevalue == " "){
+            document.getElementById("sizeanswer").innerText = "Please select suitable type of size measurement";
+            document.getElementById("sizeanswer2").innerText = "";
+            document.getElementById("sizeanswer3").innerText = "";
+            document.getElementById("sizeanswer4").innerText = "";
         }
-        else if (selectedvalue2 == "binary"){
-            var binary = actualtype; 
-            var binary2octal = parseInt(binary, 2).toString(8)
-            var binary2hexadecimal = parseInt(binary, 2).toString(16)
-            var binary2decimal = parseInt(binary, 2).toString(10)
-            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + binary2octal;
-            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + binary2hexadecimal;
-            document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + binary;
-            document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + binary2decimal;
+        else if (selectedsizevalue == "cm"){
+            var cm2cm = size2solve 
+            var cm2metres = cm2cm/100
+            var cm2inches = cm2cm/2.54
+            var cm2feet = cm2cm/30.48
+            document.getElementById("sizeanswer").innerText = size2solve + " in Cm is " + cm2cm;
+            document.getElementById("sizeanswer2").innerText = size2solve + " in Metres is " + cm2metres;
+            document.getElementById("sizeanswer3").innerText = size2solve + " in Inches is " + cm2inches;
+            document.getElementById("sizeanswer4").innerText = size2solve + " in Feet is " + cm2feet;
         }
-        else if (selectedvalue2 == "decimal"){
-            var decimal = actualtype; 
-            var decimal2octal = parseInt(decimal, 10).toString(8)
-            var decimal2hexadecimal = parseInt(decimal, 10).toString(16)
-            var decimal2binary = parseInt(decimal, 10).toString(2)
-            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + decimal2octal;
-            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + decimal2hexadecimal;
-            document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + decimal2binary;
-            document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + decimal;
-        }  
-        else if (selectedvalue2 == "octal"){
-            var octal = actualtype; 
-            var octal2decimal = parseInt(octal, 8).toString(10)
-            var octal2hexadecimal = parseInt(octal, 8).toString(16)
-            var octal2binary = parseInt(octal, 8).toString(2)
-            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + octal;
-            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + octal2hexadecimal;
-            document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + octal2binary;
-            document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + octal2decimal;
+        else if (selectedsizevalue == "metres"){
+            var metres2metres = size2solve
+            var metres2cm = metres2metres*100
+            var metres2inches = metres2metres*39.37
+            var metres2feet = metres2metres*3.281
+            document.getElementById("sizeanswer").innerText = size2solve + " in Cm is " + metres2cm;
+            document.getElementById("sizeanswer2").innerText = size2solve + " in Metres is " + metres2metres;
+            document.getElementById("sizeanswer3").innerText = size2solve + " in Inches is " + metres2inches;
+            document.getElementById("sizeanswer4").innerText = size2solve + " in Feet is " + metres2feet;
         }
-        else if (selectedvalue2 == "hexadecimal"){
-            var hexadecimal = actualtype; 
-            var hexadecimal2decimal = parseInt(hexadecimal, 16).toString(10)
-            var hexadecimal2octal = parseInt(hexadecimal, 16).toString(8)
-            var hexadecimal2binary = parseInt(hexadecimal, 16).toString(2)
-            document.getElementById("typeanswer").innerText = actualtype + " in Octal is " + hexadecimal;
-            document.getElementById("typeanswer2").innerText = actualtype + " in Hexadecimal is " + hexadecimal2octal;
-            document.getElementById("typeanswer3").innerText = actualtype + " in Binary is " + hexadecimal2binary;
-            document.getElementById("typeanswer4").innerText = actualtype + " in Decimal is " + hexadecimal2decimal;
+        else if (selectedsizevalue == "inches"){
+            var inches2inches = size2solve
+            var inches2cm = inches2inches*2.54
+            var inches2metres = inches2inches/39.37
+            var inches2feet = inches2inches/12
+            document.getElementById("sizeanswer").innerText = size2solve + " in Cm is " + inches2cm;
+            document.getElementById("sizeanswer2").innerText = size2solve + " in Metres is " + inches2metres;
+            document.getElementById("sizeanswer3").innerText = size2solve + " in Inches is " + inches2inches;
+            document.getElementById("sizeanswer4").innerText = size2solve + " in Feet is " + inches2feet;
+        }
+        else if (selectedsizevalue == "feet"){
+            var feet2feet = size2solve 
+            var feet2metres = feet2feet/3.281
+            var feet2inches = feet2feet*12
+            var feet2cm = feet2feet*30.48
+            document.getElementById("sizeanswer").innerText = size2solve + " in Cm is " + feet2cm;
+            document.getElementById("sizeanswer2").innerText = size2solve + " in Metres is " + feet2metres;
+            document.getElementById("sizeanswer3").innerText = size2solve + " in Inches is " + feet2inches;
+            document.getElementById("sizeanswer4").innerText = size2solve + " in Feet is " + feet2feet;
         }
     }
-};*/
+};
 function comma(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
